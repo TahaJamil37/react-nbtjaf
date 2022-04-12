@@ -19,8 +19,9 @@ export default function App() {
       var value = thisItem.substring(thisItem.indexOf(':') + 1);
       data[key] = value;
     }
-    if (data['X-MSISDN']) {
-      let result = data['X-MSISDN']?.replace('92', '0');
+    console.log(data);
+    if (data['x-msisdn']) {
+      let result = data['x-msisdn']?.replace('92', '0');
       setMSISDN(result);
     }
   }, []);
